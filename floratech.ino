@@ -8,11 +8,9 @@ int sensorTemp    = A2;
 int sensorUmidade = A3;
 int sensorLuz     = A4;
 
-// --- Calibração de umidade ---
 int seco    = 800; // solo seco
 int molhado = 300; // solo molhado
 
-// --- Funções auxiliares ---
 int lerSensorMedia(int pino, int N = 20) {
     long soma = 0;
     for (int i = 0; i < N; i++) {
@@ -37,33 +35,27 @@ void setup() {
 }
 
 void loop() {
-  // --- Leituras ---
-    int valorPHraw      = lerSensorMedia(sensorPH);
+    int valorPHraw      =  lerSensorMedia(sensorPH);
     delay(10);
-    int valorCO2raw     = lerSensorMedia(sensorCO2);
+    int valorCO2raw     =  lerSensorMedia(sensorCO2);
     delay(10);
-    int valorTempRaw    = lerSensorMedia(sensorTemp);
+    int valorTempRaw    =  lerSensorMedia(sensorTemp);
     delay(10);
-    int valorUmidadeRaw = lerSensorMedia(sensorUmidade);
+    int valorUmidadeRaw =  lerSensorMedia(sensorUmidade);
     delay(10);
-    int valorLuzRaw     = lerSensorMedia(sensorLuz);
-    // --- Conversões ---
-    float valorPH      = mapFloat(valorPHraw, 0, 1023, 0.0, 14.0);
-    
-    int umidadePercent = map(valorUmidadeRaw, seco, molhado, 100, 0);
-    umidadePercent = constrain(umidadePercent, 0, 100);
-    
-    float temperatura  = mapFloat(valorTempRaw, 0, 1023, -10.0, 50.0);
-    int valorCO2       = map(valorCO2raw, 0, 1023, 400, 2000);
+    int valorLuzRaw     =  lerSensorMedia(sensorLuz);
+    float valorPH       =  mapFloat(valorPHraw, 0, 1023, 0.0, 14.0);
+    int umidadePercent  =  map(valorUmidadeRaw, seco, molhado, 100, 0);
+    umidadePercent      =  constrain(umidadePercent, 0, 100);
+    float temperatura   =  mapFloat(valorTempRaw, 0, 1023, -10.0, 50.0);
+    int valorCO2        =  map(valorCO2raw, 0, 1023, 400, 2000);
 
-    // --- Luminosidade precisa ---
     static int ldrMin = 1023;
     static int ldrMax = 0;
 
     if(valorLuzRaw < ldrMin) ldrMin = valorLuzRaw;
     if(valorLuzRaw > ldrMax) ldrMax = valorLuzRaw;
 
-  // Mapeamento inverso porque muita luz → resistência baixa → tensão baixa
     int lux = map(valorLuzRaw, ldrMax, ldrMin, 0, 20000);
     lux = constrain(lux, 0, 20000);
 
@@ -74,7 +66,6 @@ void loop() {
     Serial.print("Temperatura: "); Serial.print(temperatura, 1); Serial.println(" C");
     Serial.print("CO2: "); Serial.print(valorCO2); Serial.println(" ppm");
     Serial.print("Luminosidade: "); Serial.print(lux); Serial.println(" lux");
-    Serial.print("LDR bruto: "); Serial.println(valorLuzRaw);
     Serial.println("--------------------------------------------");
 
     // --- LCD ---
