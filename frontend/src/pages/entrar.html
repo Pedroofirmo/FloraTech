@@ -8,15 +8,39 @@
     <link rel="stylesheet" href="../assets/styles/entrar.css">
 </head>
 <body>
-    <section class="card-login">
-        <input type="text" placeholder="Email">
-        <input type="text" placeholder="Senha">
-        <button class="button-login"></button>
-    </section>
-    <div class="links-login">
-        <p>Ainda não tem conta?</p>
-        <a href="login.html">Criar</a>
+
+    <div class="container-login">
+        
+        <header class="login-header">
+            <img src="../assets/img/logo.png" alt="Logo da Tend" class="logo"> 
+            <h1>entrar</h1>
+            <p class="subtitle">Entre na sua conta FloraTech</p>
+        </header>
+
+        <button class="btn-social-login">
+            <img src="../assets/img/google-logo.png" alt="Ícone do Google"> 
+            Entrar com google
+        </button>
+        
+        <div class="divider">
+            <span class="or-text">ou</span>
+        </div>
+
+        <form action="/login" method="POST" class="card-login"> 
+            <input type="email" placeholder="Email" class="input-email" name="email" required>
+            
+            <div class="password-field">
+                <input type="password" placeholder="Senha" class="input-password" name="password" required>
+                <span class="toggle-password"></span> 
+            </div>
+            
+            <a href="esqueceu.html" class="forgot-password-link">Esqueceu a senha?</a>
+
+            <button type="submit" class="button-login">Entrar</button>
+        </form>
+
     </div>
+
     <script src="../scripts/entrar.js"></script>
 </body>
 </html>

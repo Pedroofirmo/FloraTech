@@ -12,13 +12,13 @@ function animarContador(elemento, alvo) {
 
         if (progresso === 1) {
             if (alvo === 1000) {
-                 textoAtualizado = '+1.000'; 
+                textoAtualizado = '+1.000'; 
             } else if (alvo === 95) {
                 textoAtualizado = '95%';
             } else if (alvo === 32) {
                 textoAtualizado = '+32';
             } else {
-                 textoAtualizado = alvo.toLocaleString('pt-BR'); 
+                textoAtualizado = alvo.toLocaleString('pt-BR'); 
             }
         } else {
             if (textoInicial.startsWith('+')) {

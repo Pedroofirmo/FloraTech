@@ -10,6 +10,9 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh; 
+}
+
+body {
     font-family: Arial, sans-serif; 
     background-color: #f5f5f5; 
     min-height: 100vh;
@@ -86,25 +89,10 @@ body {
     margin: 20px 0;
 }
 
-.divider::before,
-.divider::after {
-    content: '';
-    flex: 1;
-    border-bottom: 1px solid #ddd;
+.card-login {
+    display: flex;
+    flex-direction: column;
 }
-
-.divider:not(:empty)::before {
-    margin-right: .5em;
-}
-
-.divider:not(:empty)::after {
-    margin-left: .5em;
-}
-
-    .card-login {
-        display: flex;
-        flex-direction: column;
-    }
 
 .card-login input {
     width: 100%;
@@ -133,20 +121,6 @@ body {
 .input-password {
     padding-right: 40px !important; 
     margin-bottom: 0 !important;
-}
-
-.toggle-password {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url('src/assets/img/invisivel.svg'); 
 }
 
 .forgot-password-link {
@@ -179,4 +153,26 @@ body {
 
 .button-login:hover {
     background-color: #2e7a3a; 
+}
+
+.links-signup {
+    margin-top: 40px;
+    color: #333; 
+    font-size: 16px;
+}
+
+.links-signup p {
+    display: inline;
+    margin: 0;
+}
+
+.signup-link {
+    color: #378e47; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
 }
