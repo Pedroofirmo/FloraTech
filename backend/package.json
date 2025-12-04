@@ -1,0 +1,27 @@
+{
+  "name": "flora-tech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pedroofirmo/floratech-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pedroofirmo/floratech-site/issues"
+  },
+  "homepage": "https://github.com/Pedroofirmo/floratech-site#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "mysql2": "^3.15.3",
+    "nodemon": "^3.1.11"
+  }
+}

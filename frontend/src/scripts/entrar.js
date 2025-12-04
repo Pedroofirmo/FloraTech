@@ -23,3 +23,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.querySelector("#loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = document.querySelector(".input-email").value;
+    const senha = document.querySelector(".input-password").value;
+
+    const resposta = await fetch("http://localhost:3333/entrar/entrar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha })
+    });
+
+    const data = await resposta.json();
+    console.log(data);
+
+    if (data.usuario) {
+        window.location.href = "../index.html";
+    } else {
+        alert("Email ou senha incorretos.");
+    }
+});

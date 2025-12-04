@@ -146,7 +146,8 @@ body {
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('src/assets/img/invisivel.svg'); 
+    background-image: url('src/assets/img/invisivel.svg');
+    padding-left: 60px;
 }
 
 .forgot-password-link {
