@@ -407,7 +407,7 @@ main p{
     color: var(--cor-texto-claro);
     padding: 80px 20px; 
     min-height: 400px; 
-    display: flex;
+    display: flex;  
     justify-content: center;
     align-items: center;
     z-index: 1; 
