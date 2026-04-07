@@ -1,0 +1,177 @@
+/* --- Reset e Configurações Gerais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f4f2; /* Fundo levemente esverdeado */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- Container Principal --- */
+.container-login {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* --- Header (Logo e Títulos) --- */
+.login-header .logo {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.login-header h1 {
+    font-size: 24px;
+    color: #1a4a2e; /* Verde FloraTech */
+    text-transform: lowercase; /* Seguindo o h1 do seu HTML */
+    margin-bottom: 8px;
+}
+
+.login-header .subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* --- Botão Social (Google) --- */
+.btn-social-login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s;
+    margin-bottom: 20px;
+}
+
+.btn-social-login:hover {
+    background-color: #f9f9f9;
+}
+
+.btn-social-login img {
+    width: 20px;
+}
+
+/* --- Divisor "ou" --- */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #bbb;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.divider .or-text {
+    padding: 0 10px;
+    font-size: 13px;
+}
+
+/* --- Formulário --- */
+.card-login {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #1a4a2e;
+}
+
+/* Campo de Senha com Olho (opcional) */
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    /* Aqui você pode adicionar um ícone de olho via background-image futuramente */
+}
+
+/* Link Esqueci a Senha */
+.forgot-password-link {
+    text-align: right;
+    font-size: 12px;
+    color: #1a4a2e;
+    text-decoration: none;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+/* Botão Entrar Principal */
+.button-login {
+    width: 100%;
+    padding: 15px;
+    background-color: #1a4a2e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.button-login:hover {
+    background-color: #2d6643;
+}
+
+.button-login:active {
+    transform: scale(0.98);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 480px) {
+    .container-login {
+        padding: 30px 20px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    
+    body {
+        background-color: white;
+    }
+}

@@ -142,3 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     contadorObserver.observe(secaoTrabalho);
 });
+
+function irParaPagina() {
+    window.location.href = "../frontend/src/pages/contato.html"; 
+}
+
+function paginaentrar() {
+    window.location.href = "../frontend/src/pages/entrar.html"; 
+}
+

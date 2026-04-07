@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | floratech</title>
+    <link rel="icon" href="src/assets/img/logo.png" type="image/png">
+    <link rel="stylesheet" href="../assets/styles/contato.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h2>Solicite seu Orçamento</h2>
+            <form id="orcamentoForm">
+                <input type="text" placeholder="Nome *" required>
+                
+                <input type="tel" placeholder="Telefone *" value="+55 " required>
+                
+                <input type="email" placeholder="E-mail *" required>
+                
+                <input type="text" placeholder="Nome da Empresa *" required>
+                
+                <select required>
+                    <option value="" disabled selected>Produtos *</option>
+                    <option value="estufa">Estufa Agrícola</option>
+                    <option value="telas">Telas de Proteção</option>
+                </select>
+
+                <select required>
+                    <option value="" disabled selected>Estado *</option>
+                    <option value="CE">Ceará</option>
+                    <option value="SP">São Paulo</option>
+                </select>
+
+                <select required>
+                    <option value="" disabled selected>Cidade *</option>
+                    <option value="guaraciaba">Guaraciaba do Norte</option>
+                    <option value="tiangua">Tianguá</option>
+                </select>
+
+                <input type="text" placeholder="Tipo de Cultivo">
+
+                <textarea placeholder="Observações Importantes" rows="4"></textarea>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="termos" required>
+                    <label for="termos">Eu aceito os Termos de Uso *</label>
+                </div>
+
+                <button type="submit">Enviar Solicitação</button>
+            </form>
+        </div>
+
+        <div class="image-section">
+            <div class="image-wrapper">
+                <img src="../assets/img/agricultor_estufa.jpg" alt="Estufa">
+            </div>
+            <div class="image-wrapper">
+                <img src="../assets/img/medicaodephdosolo.jpg" alt="Vista Aérea">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
