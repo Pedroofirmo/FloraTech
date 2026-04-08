@@ -144,10 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function irParaPagina() {
-    window.location.href = "../frontend/src/pages/contato.html"; 
+    window.location.href = "/src/pages/contato.html"; 
 }
 
 function paginaentrar() {
-    window.location.href = "../frontend/src/pages/entrar.html"; 
+    window.location.href = "/src/pages/entrar.html"; 
 }
-
