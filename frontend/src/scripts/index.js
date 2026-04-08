@@ -148,5 +148,5 @@ function irParaPagina() {
 }
 
 function paginaentrar() {
-    window.location.href = "/src/pages/entrar.html"; 
+    window.location.href = "src/pages/entrar.html";
 }

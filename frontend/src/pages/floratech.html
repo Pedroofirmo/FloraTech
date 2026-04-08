@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | FloraTech</title>
+    <link rel="stylesheet" href="../assets/styles/floratech.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="user-info">
+                <img src="../assets/img/perfil.png" alt="Usuário" class="avatar">
+                <div class="user-text">
+                    <h3>João Sá</h3>
+                    <span>Seja bem-vindo</span>
+                </div>
+            </div>
+            <div class="header-controls">
+                <div class="toggle-switch"></div>
+                <img src="../assets/img/settings-icon.png" alt="Configurações" class="icon-settings">
+            </div>
+        </header>
+
+        <div class="search-section">
+            <div class="location-badge">
+                <img src="../assets/img/pin.png" alt="Local"> Ubajara
+            </div>
+            <input type="text" placeholder="Pesquisar">
+            <button class="btn-search">🔍</button>
+        </div>
+
+        <div class="estufa-selector">
+            <button class="btn-estufa">Estufa 01 <span class="plus-icon">+</span></button>
+        </div>
+
+        <main class="sensors-grid">
+            <div class="sensor-card">
+                <div class="sensor-icon">🌡️</div>
+                <div class="sensor-data">
+                    <span class="value">32°</span>
+                    <div class="status">
+                        <span class="dot online"></span> Conectado
+                    </div>
+                </div>
+                <div class="arrow down">↓</div>
+            </div>
+
+            <div class="sensor-card">
+                <div class="sensor-icon">💧</div>
+                <div class="sensor-data">
+                    <span class="value">9%</span>
+                    <div class="status">
+                        <span class="dot online"></span> Conectado
+                    </div>
+                </div>
+                <div class="arrow up">↑</div>
+            </div>
+
+            <div class="sensor-card">
+                <div class="sensor-icon">🌱</div>
+                <div class="sensor-data">
+                    <span class="value">3.1</span>
+                    <div class="status">
+                        <span class="dot online"></span> Conectado
+                    </div>
+                </div>
+                <div class="arrow up">↑</div>
+            </div>
+
+            <div class="sensor-card">
+                <div class="sensor-icon">💡</div>
+                <div class="sensor-data">
+                    <span class="value">32°</span>
+                    <div class="status">
+                        <span class="dot online"></span> Conectado
+                    </div>
+                </div>
+                <div class="arrow down">↓</div>
+            </div>
+
+            <div class="sensor-card wide">
+                <div class="co2-header">
+                    <div class="sensor-icon">☁️ CO2</div>
+                    <span class="value">78.9%</span>
+                </div>
+                <div class="gauge-container">
+                    <div class="gauge"></div> </div>
+                <div class="arrow up float-right">↑</div>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active">📊</a>
+            <a href="#" class="nav-item">📡</a>
+            <a href="#" class="nav-item">📅</a>
+        </nav>
+    </div>
+
+</body>
+</html>

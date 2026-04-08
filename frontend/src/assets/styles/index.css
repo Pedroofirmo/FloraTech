@@ -560,6 +560,11 @@ footer .footer-creditos p {
     display: none;
 }
 
+.link-funcional{
+    color: #e0f2f1;
+    text-decoration: none; 
+}
+
 @media (max-width: 500px) {
     header {
         padding: 15px 10px;
