@@ -1,65 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato | floratech</title>
-    <link rel="icon" href="src/assets/img/logo.png" type="image/png">
+    <title>Contato | FloraTech</title>
+    
+    <link rel="icon" href="../assets/img/logo.png" type="image/png">
+    
     <link rel="stylesheet" href="../assets/styles/contato.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 </head>
 <body>
+
     <div class="container">
         <div class="form-section">
             <h2>Solicite seu Orçamento</h2>
+            
             <form id="orcamentoForm">
-                <input type="text" placeholder="Nome *" required>
+                <input type="text" name="nome" placeholder="Nome *" required>
                 
-                <input type="tel" placeholder="Telefone *" value="+55 " required>
+                <input type="tel" name="telefone" placeholder="Telefone *" value="+55 " required>
                 
-                <input type="email" placeholder="E-mail *" required>
+                <input type="email" name="email" placeholder="E-mail *" required>
                 
-                <input type="text" placeholder="Nome da Empresa *" required>
+                <input type="text" name="empresa" placeholder="Nome da Empresa *" required>
                 
-                <select required>
+                <select name="produto" required>
                     <option value="" disabled selected>Produtos *</option>
-                    <option value="estufa">Estufa Agrícola</option>
-                    <option value="telas">Telas de Proteção</option>
+                    <option value="Estufa Agrícola">Kit Personalizado</option>
+                    <option value="Telas de Proteção">Kit Completo</option>
                 </select>
 
-                <select required>
+                <select name="estado" required>
                     <option value="" disabled selected>Estado *</option>
-                    <option value="CE">Ceará</option>
-                    <option value="SP">São Paulo</option>
+                    <option value="Ceará">Ceará</option>
                 </select>
 
-                <select required>
+                <select name="cidade" required>
                     <option value="" disabled selected>Cidade *</option>
-                    <option value="guaraciaba">Guaraciaba do Norte</option>
-                    <option value="tiangua">Tianguá</option>
+                    <option value="Guaraciaba do Norte">Guaraciaba do Norte</option>
+                    <option value="Tianguá">Tianguá</option>
+                    <option value="Ubajara">Ubajara</option>
+                    <option value="São Benedito">São Benedito</option>
+                    <option value="São Benedito">Ibiapina</option>
                 </select>
 
-                <input type="text" placeholder="Tipo de Cultivo">
+                <input type="text" name="cultivo" placeholder="Tipo de Cultivo (ex: Tomate, Rosa...)">
 
-                <textarea placeholder="Observações Importantes" rows="4"></textarea>
+                <textarea name="obs" placeholder="Detalhe a sua cultura, quantas esrufas são, quais são suas nescessidades" rows="4"></textarea>
 
                 <div class="checkbox-container">
                     <input type="checkbox" id="termos" required>
                     <label for="termos">Eu aceito os Termos de Uso *</label>
                 </div>
 
-                <button type="submit">Enviar Solicitação</button>
+                <button type="submit" id="btnEnviar">Enviar Solicitação</button>
             </form>
         </div>
 
         <div class="image-section">
             <div class="image-wrapper">
-                <img src="../assets/img/agricultor_estufa.jpg" alt="Estufa">
+                <img src="../assets/img/agricultor_estufa.jpg" alt="Trabalho na Estufa">
             </div>
             <div class="image-wrapper">
-                <img src="../assets/img/medicaodephdosolo.jpg" alt="Vista Aérea">
+                <img src="../assets/img/medicaodephdosolo.jpg" alt="Monitoramento Técnico">
             </div>
         </div>
     </div>
+
+    <script src="../scripts/contato.js"></script>
+
 </body>
 </html>
