@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const togglePassword = document.querySelector('.toggle-password');
     const formLogin = document.getElementById('form-login');
 
-    const EMAIL_CORRETO = "admin@floratech.com";
-    const SENHA_CORRETA = "123456";
+    const EMAIL_CORRETO = "lucas.brandao@floratech.com";
+    const SENHA_CORRETA = "596812";
 
     if (passwordInput && togglePassword) {
         const IMAGE_PATH_BASE = '../assets/img/'; 
