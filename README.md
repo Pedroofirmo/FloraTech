@@ -31,7 +31,7 @@ Transformar dados brutos de sensores em informações visuais e úteis, proporci
 ## 🛠️ Tecnologias Utilizadas
 
 <p>
-  <img src="https://img.shields.io/badge/-React-black?style=for-the-badge&logo=react&logoColor=cyan"/>
+  <img src="https://img.shields.io/badge/-C++-black?style=for-the-badge&logo=react&logoColor=cyan"/>
   <img src="https://img.shields.io/badge/-JavaScript-black?style=for-the-badge&logo=javascript&logoColor=yellow"/>
   <img src="https://img.shields.io/badge/-HTML5-black?style=for-the-badge&logo=html5&logoColor=orange"/>
   <img src="https://img.shields.io/badge/-CSS3-black?style=for-the-badge&logo=css3&logoColor=blue"/>
